@@ -1,0 +1,24 @@
+void setup() {
+    size(500,500);
+    stroke(250);
+    smooth();
+}
+
+
+void desenho() {
+    background(0,0,0);
+    fill(250,250,250);
+
+    ellipse(250,250,360,360);
+    float s = map(second(),0,60,0,TWO_PI)-HALP_PI;
+    float m = map(minute(),0,60,0,TWO_PI)-HALF_PI;
+    float h = map(hour(),0,12,0,TWO_PI)-HALF_PI;
+    stroke();
+    strokeWeight(1);
+    line(250,250,cos(s)*180+250,sin(s)*180+250);
+    strokeWeight(4);
+    line(250,250,cos(m)*160+250,sin(m)*160+250);
+    strokeWeight(7);
+    line(250,250,cos(h)*100+250,sin(h)*100+250);
+
+}
